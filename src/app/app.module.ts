@@ -11,8 +11,8 @@ import {PagesModule} from '../pages/pages.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,
-    AppRoutingModule,PagesModule,TravelMaterialModule
+    BrowserModule, BrowserAnimationsModule,
+    AppRoutingModule, PagesModule, TravelMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

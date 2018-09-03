@@ -5,7 +5,7 @@ import { TravelMaterialModule } from '../app/travel-material.module';
 
 @NgModule({
   imports: [
-    CommonModule,TravelMaterialModule
+    CommonModule, TravelMaterialModule
   ],
   declarations: [HomePageComponent]
 })
