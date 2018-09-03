@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { TravelMaterialModule } from './travel-material.module';
 import {PagesModule} from '../pages/pages.module'
 
 @NgModule({
@@ -11,8 +11,8 @@ import {PagesModule} from '../pages/pages.module'
     AppComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,MatButtonModule,
-     MatCheckboxModule, AppRoutingModule,PagesModule
+    BrowserModule,BrowserAnimationsModule,
+    AppRoutingModule,PagesModule,TravelMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
