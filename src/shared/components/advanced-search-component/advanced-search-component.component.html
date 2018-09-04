@@ -1,0 +1,72 @@
+<div id="advanced-search-container">
+  <mat-card>
+    
+    <div>
+
+      <div class="text-align-left">
+          <div class="display-inline-block">
+              <mat-form-field>
+                  <mat-select placeholder="Favorite food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                     Spain
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </div>
+         <div class="display-inline-block border-left-select-input">
+            <mat-form-field>
+                <mat-select placeholder="Favorite food">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    marca
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+         <div class="display-inline-block border-left-select-input">
+            <mat-form-field>
+                <mat-select placeholder="Favorite food">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    any
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+
+      </div>
+
+
+      <div id="advanced-search-bottom-inputs">
+        <div class="display-inline-block">
+            <mat-form-field>
+                <mat-select placeholder="Favorite food">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                   Spain
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+       <div class="display-inline-block border-left-select-input">
+          <mat-form-field>
+              <mat-select placeholder="Favorite food">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  marca
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+       </div>
+       <div class="display-inline-block border-left-select-input">
+          <mat-form-field>
+              <mat-select placeholder="Favorite food">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  any
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+       </div>
+      </div>
+      <div id="advanced-search-bottom-button">
+        <button mat-button class="button-teal-color">Find Hotel</button>
+      </div>
+    </div>
+  </mat-card>
+</div>
