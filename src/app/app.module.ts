@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TravelMaterialModule } from './travel-material.module';
 import {PagesModule} from '../pages/pages.module';
+import {SharedModule} from '../shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import {PagesModule} from '../pages/pages.module';
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
-    AppRoutingModule, PagesModule, TravelMaterialModule
+    AppRoutingModule, PagesModule, TravelMaterialModule,SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
