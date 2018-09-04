@@ -3,70 +3,37 @@
     
     <div>
 
-      <div class="text-align-left">
+      <div class="advanced-search-row text-align-left">
           <div class="display-inline-block">
-              <mat-form-field>
-                  <mat-select placeholder="Favorite food">
-                    <mat-option *ngFor="let food of foods" [value]="food.value">
-                     Spain
-                    </mat-option>
-                  </mat-select>
-                </mat-form-field>
+              <app-select-button (click)="onSelectCity()" buttonText="Spain"></app-select-button>
           </div>
          <div class="display-inline-block border-left-select-input">
-            <mat-form-field>
-                <mat-select placeholder="Favorite food">
-                  <mat-option *ngFor="let food of foods" [value]="food.value">
-                    marca
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
+            <app-select-button (click)="onSelectCity()" buttonText="marca"></app-select-button>
          </div>
          <div class="display-inline-block border-left-select-input">
-            <mat-form-field>
-                <mat-select placeholder="Favorite food">
-                  <mat-option *ngFor="let food of foods" [value]="food.value">
-                    any
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
+            <app-select-button (click)="onSelectCity()" buttonText="any"></app-select-button>
          </div>
-
+         <div class="display-inline-block border-left-select-input">
+            <app-select-button (click)="onSelectCity()" buttonText="any"></app-select-button>
+         </div>
       </div>
 
-
+      <div class="advanced-search-row text-align-left">
       <div id="advanced-search-bottom-inputs">
         <div class="display-inline-block">
-            <mat-form-field>
-                <mat-select placeholder="Favorite food">
-                  <mat-option *ngFor="let food of foods" [value]="food.value">
-                   Spain
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
+            <app-select-button (click)="onSelectCity()" buttonText="any"></app-select-button>
         </div>
        <div class="display-inline-block border-left-select-input">
-          <mat-form-field>
-              <mat-select placeholder="Favorite food">
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                  marca
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+          <app-select-button (click)="onSelectCity()" buttonText="any"></app-select-button>
        </div>
        <div class="display-inline-block border-left-select-input">
-          <mat-form-field>
-              <mat-select placeholder="Favorite food">
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                  any
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+          <app-select-button (click)="onSelectCity()" buttonText="any"></app-select-button>
        </div>
       </div>
       <div id="advanced-search-bottom-button">
         <button mat-button class="button-teal-color">Find Hotel</button>
       </div>
+    </div>
     </div>
   </mat-card>
 </div>

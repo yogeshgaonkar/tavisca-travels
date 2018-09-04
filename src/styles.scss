@@ -2,8 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~@angular/material/_theming.scss';
 
-$teal-color:#30909E;
-
+@import './constants/colors.scss';
 
 .button-teal-color{
     background: $teal-color;

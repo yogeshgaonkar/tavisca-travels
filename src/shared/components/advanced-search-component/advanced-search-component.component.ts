@@ -9,7 +9,7 @@ export class AdvancedSearchComponentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  onSelectCity() { }
 }
