@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
   HotelSearchVal: String = '';
   options: string[] = [];
   showAdvancedSearch: boolean;
+  showHotelSearchVal: boolean;
   constructor( private searchService: SeachServiceService ) { }
 
   ngOnInit() {
@@ -23,17 +24,28 @@ export class HomePageComponent implements OnInit {
 
   focusFunction() {
     this.searchContainerBorder = 'search-field-border';
+    this.showHotelSearchVal = true;
   }
 
   focusOutFunction() {
     this.searchContainerBorder = '';
+   // this.showHotelSearchVal = false;
   }
 
   showAdvancedSearchOptions() {
     this.showAdvancedSearch = true;
+    this.showHotelSearchVal = false;
   }
+
   selectCountry(option) {
     console.log('selected option', option);
+    this.HotelSearchVal = option.name;
+    this.showAdvancedSearch = true;
+    this.showHotelSearchVal = false;
+  }
+
+  clearSearch() {
+    this.HotelSearchVal = '';
   }
 
 }
