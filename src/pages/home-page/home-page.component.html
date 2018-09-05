@@ -2,12 +2,12 @@
 <div class="home-page-padding" id="home-page-title-section">
         <app-home-title></app-home-title>
         <div id="seach-input-field" class="{{searchContainerBorder}}">
-                <input id="hotel-search-input" type="text"  [(ngModel)]="HotelSearchVal" (focus)="focusFunction()" (focusout)="focusOutFunction()" />
+                <input id="hotel-search-input" type="text"  [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()" (focusout)="focusOutFunction()" />
                 <i class="material-icons">{{HotelSearchVal?'close':'search'}}</i>                    
         </div>
         <div *ngIf="HotelSearchVal" id="search-auto-complete-container">
                 <ul class="list-style-none">
-                   <li *ngFor="let option of options | hotelfilter: HotelSearchVal "> {{option}}</li>
+                   <li *ngFor="let option of options | hotelfilter: HotelSearchVal " (click)="selectCountry(option)"> {{option}}</li>
                 </ul>
                 <div (click)="showAdvancedSearchOptions()"><h4>Cant find what ypu are  looking for?</h4></div>
         </div>

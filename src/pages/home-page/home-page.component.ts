@@ -32,5 +32,8 @@ export class HomePageComponent implements OnInit {
   showAdvancedSearchOptions() {
     this.showAdvancedSearch = true;
   }
+  selectCountry(option) {
+    console.log('selected option', option);
+  }
 
 }
