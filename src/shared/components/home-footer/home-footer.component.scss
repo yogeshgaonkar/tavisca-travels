@@ -1,6 +1,39 @@
 @import '../../../constants/colors.scss';
 
 #home-footer-container{
-    height: 400px;
     background:  $dark-primary;
+    padding: 50px 200px;
+    color:#fff;
+    font-family:"Helvetica Neue",sans-serif;;
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.columns{
+    width: 10%;
+  text-align: left;
+  flex:1;
+  }
+.heading{font-weight: bold;  margin: 10px; font-size: 20px;}
+.sub-heading{  padding:10px;  font-size: 15px;}
+.fulltext{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.mainText{
+    width: 10%;
+  text-align: left;
+  font-size: 10px;
+  flex:5;
+  }
+.logoText{
+    width: 10%;
+  text-align: left;
+  font-size: 20px;
+  flex:1;
+} 
+.otherMenu{display: flex;
+    flex-wrap: nowrap;padding:65px 0px 10px} 
+.phone{flex:2.5;font-size:40px;}
+.subMenu{flex:1;font-size:12px;}
 }
