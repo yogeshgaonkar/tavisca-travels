@@ -1,0 +1,20 @@
+<div id="carousal-main-contaner">
+  <div class="display-inline-block carousal-controls-div">
+      <i (click)="prevHotels()" class="material-icons">
+          arrow_back_ios
+        </i>
+  </div>
+  <div class="display-inline-block" style="width:80%">
+      <ul *ngIf="showCarosalList" id="carousal-list" class="list-style-none">
+          <li *ngFor="let hotel of currenthotels">
+            <app-hotel-card cardData="{{hotel.name+':'+hotel.price}}"></app-hotel-card>
+          </li>
+        </ul>
+  </div>
+  <div class="display-inline-block carousal-controls-div" >
+      <i (click)="nextHotels()" class="material-icons">
+          arrow_forward_ios
+      </i>
+  </div>
+  
+</div>
