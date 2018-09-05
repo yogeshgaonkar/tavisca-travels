@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hotel-card',
@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hotel-card.component.scss']
 })
 export class HotelCardComponent implements OnInit {
-
+  showCardDetails: boolean;
+  @Input() cardData = null;
   constructor() { }
 
   ngOnInit() {
+    const data = this.cardData.split(':');
+    this.cardData = {
+      'name': data[0],
+      'price': data[1],
+      'address': data[2]
+    };
+  }
+
+  cardDetails(flag) {
+    console.log('enter in open card', flag);
+    if (flag === 'open') {
+      this.showCardDetails = true;
+    } else {
+      this.showCardDetails = false;
+    }
   }
 
 }
