@@ -7,10 +7,11 @@ import { SelectButtonComponent } from './select-button/select-button.component';
 import { HomeTitleComponent } from './home-title/home-title.component';
 import { HotelCardComponent } from './hotel-card/hotel-card.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
+import {MatGridListModule, MatCardModule} from '@angular/material';
 
 @NgModule({
   imports: [
-    CommonModule, TravelMaterialModule
+    CommonModule, TravelMaterialModule, MatGridListModule, MatCardModule
   ],
   declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent,
      HomeTitleComponent, HotelCardComponent, HomeFooterComponent ],
