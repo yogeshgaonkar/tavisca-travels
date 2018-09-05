@@ -1,6 +1,13 @@
 <div class="select-button">
-    <span>{{buttonText}}</span>
-    <i class="drop-down-icon material-icons">
-        keyboard_arrow_down
+    <i  class="button-icon material-icons">
+            {{leftIcon}}
+    </i>
+    <span *ngIf="buttonText">{{buttonText}}</span>
+    <i  class="button-icon material-icons">
+            {{middleIcon}}
+    </i>
+    <span *ngIf="secondText">{{secondText}}</span>
+    <i  class="button-icon material-icons">
+            {{rightIcon}}
     </i>
 </div>

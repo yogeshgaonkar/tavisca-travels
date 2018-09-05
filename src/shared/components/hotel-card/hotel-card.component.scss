@@ -1,0 +1,25 @@
+.hotel-card{
+    width:240px;
+    padding: 0;
+    padding-bottom: 15px;
+    .cover-image{
+        height: 100px;
+        width:100%;
+    }
+    .hotel-information-holder{
+        padding: 15px;
+        .stars-holder{
+            color: yellow;
+            width: 60%;
+            .material-icons{
+                width: 25px;
+                font-size: 15px;
+            }
+        }
+        .night-count{
+            width: 38%;
+            text-align: right;
+        }
+    }
+    
+}

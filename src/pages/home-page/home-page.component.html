@@ -1,50 +1,20 @@
 <app-home-header ></app-home-header>
-
-<div style="text-align:center">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <img width="100" alt="Angular Logo" src="../assets/rbs-logo.JPG">
-      <span class="header-font">Hotels</span>
-      <span class="header-font">Holidays</span>
-      <span class="header-font">Flights</span>
-      <span class="header-font">Cruises</span>
-      <span class="header-font">Extras</span>
-      <span class="header-font">City Breaks</span>
-      <span class="header-font">Car Hire</span>
-      <span class="header-spacer"></span>
-      <mat-icon class="header-icon" [matMenuTriggerFor]="accountMenu">account_circle</mat-icon>
-      <span class="header-font">My Account</span>
-      <mat-menu #accountMenu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>settings_system_daydream</mat-icon>
-          <span>Settings</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>logout</mat-icon>
-          <span>Logout</span>
-        </button>
-      </mat-menu>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <div style="text-align:left">
-    <span class="heading-font">Hotels Home</span>
-    <hr style="color:#c0c0c0">
-    <div style="background-image: url(../assets/s3.jpg); height: 600px; width: 1300px; text-align:center" >
-      <!-- <button color="primary">Travel Service</button> -->
-      <br>
-      <!-- <button>Hotel</button> -->
-      <!-- <div style="background-color:white; width: 80%; text-align:center;"> -->
-        <mat-form-field style="width: 80%">
-          <input matInput placeholder="Where do you want to go?" width="800px;">
-          <mat-icon matSuffix>search</mat-icon>
-        </mat-form-field>
-
-        <app-advanced-search-component></app-advanced-search-component>
-      <!-- </div> -->
-    </div>
-   </div>
+<div class="home-page-padding" id="home-page-title-section">
+        <app-home-title></app-home-title>
+        <div id="seach-input-field" class="{{searchContainerBorder}}">
+                <input id="hotel-search-input" type="text"  [(ngModel)]="HotelSearchVal" (focus)="focusFunction()" (focusout)="focusOutFunction()" />
+                <i class="material-icons">{{HotelSearchVal?'close':'search'}}</i>                    
+        </div>
+        <div *ngIf="HotelSearchVal" id="search-auto-complete-container">
+                <ul class="list-style-none">
+                   <li *ngFor="let option of options | hotelfilter: HotelSearchVal "> {{option}}</li>
+                </ul>
+                <div (click)="showAdvancedSearchOptions()"><h4>Cant find what ypu are  looking for?</h4></div>
+        </div>
+       
+        <app-advanced-search-component *ngIf="showAdvancedSearch"></app-advanced-search-component>
 </div>
+<div  class="home-page-padding"  id="hotel-cards-container">
+        <app-hotel-card></app-hotel-card>
+</div>   
+<app-home-footer></app-home-footer>

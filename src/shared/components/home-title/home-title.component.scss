@@ -1,0 +1,22 @@
+@import '../../../constants/colors.scss';
+
+#home-header-container{
+    padding: 30px;
+    padding-left: 0px;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    height: 120px;
+    span{
+        display: inline-block;
+    }
+    #title-travel-service{
+        background: $dark-primary;
+        padding: 8px;
+    }
+    #title-hotel{
+        background: $secondary;
+        padding: 5px;
+    }
+}

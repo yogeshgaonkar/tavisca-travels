@@ -4,12 +4,17 @@ import { TravelMaterialModule } from '../../app/travel-material.module';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { AdvancedSearchComponentComponent } from './advanced-search-component/advanced-search-component.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
+import { HomeTitleComponent } from './home-title/home-title.component';
+import { HotelCardComponent } from './hotel-card/hotel-card.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 
 @NgModule({
   imports: [
     CommonModule, TravelMaterialModule
   ],
-  declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent ],
-  exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent ]
+  declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent,
+     HomeTitleComponent, HotelCardComponent, HomeFooterComponent ],
+  exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent,
+    SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent ]
 })
 export class ComponentsModule { }

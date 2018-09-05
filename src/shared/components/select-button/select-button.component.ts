@@ -8,6 +8,10 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class SelectButtonComponent implements OnInit {
   @Output() ClickEvent: EventEmitter<any> = new EventEmitter<any>();
   @Input() buttonText = '';
+  @Input() leftIcon = '';
+  @Input() rightIcon = '';
+  @Input() middleIcon = '';
+  @Input() secondText = '';
   constructor() { }
 
   ngOnInit() { }

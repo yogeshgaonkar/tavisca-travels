@@ -8,13 +8,15 @@
     padding-right: 8px;
     border-radius: 2px;
     border: 1px solid $dark-grey-warm;
+    cursor: pointer;
     color: $dark-grey-warm;
-    .drop-down-icon{
+    .button-icon{
         color:$light-blue;
         margin-top: 2px;
     }
     span{
         margin-top: 5px;
         margin-right: 10px;
+        margin-left: 10px;
     }
 }

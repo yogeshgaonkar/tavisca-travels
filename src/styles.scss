@@ -4,6 +4,9 @@
 
 @import './constants/colors.scss';
 
+body{
+    margin: 0;
+}
 .button-teal-color{
     background: $teal-color;
     color: white;
@@ -12,6 +15,16 @@
 .display-inline-block{
     display: inline-block;
 }
+.display-inline-flex{
+    display: inline-flex;
+}
 .text-align-left{
     text-align: left;
+}
+.text-align-center{
+    text-align: center;
+}
+.list-style-none{
+    list-style: none;
+    padding: 0;
 }

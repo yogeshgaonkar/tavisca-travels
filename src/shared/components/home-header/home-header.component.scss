@@ -1,0 +1,40 @@
+@import '../../../constants/colors.scss';
+
+#my-account-link-holder{
+    text-align: right;
+    width: 30%;
+    display: inline-block;
+    .mat-icon{
+        margin-right: 5px;
+        font-size: 30px;
+    }
+    span{
+        font-size: 17px;
+        margin-left: 5px;
+    }
+    #my-account-link{
+        cursor: pointer;
+    }
+}
+#headder-menu-list{
+    width: 50%;
+    display: inline-block;
+    color: white;
+    span{
+        margin-left: 10px;
+        margin-right: 10px;
+        display:inline-block;
+        cursor: pointer;
+    }
+}
+#headder-menu-icon-holder{
+    width: 20%;
+    display: inline-flex;
+    color: white;
+    img{
+        height: 40px;
+    }
+}
+#header-tool-bar{
+    background: $dark-primary;
+}
