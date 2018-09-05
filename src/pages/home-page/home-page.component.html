@@ -3,7 +3,7 @@
         <app-home-title></app-home-title>
         <div id="seach-input-field" class="{{searchContainerBorder}}">
                 <input id="hotel-search-input" type="text"  [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()" (focusout)="focusOutFunction()"/>
-                <i class="material-icons" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>
+                <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>
         </div>
         <div *ngIf="showHotelSearchVal" id="search-auto-complete-container">
                 <ul class="list-style-none">
