@@ -7,12 +7,26 @@
           <div class="display-inline-block">
               <app-select-button (click)="onSelectCity()" buttonText="Check in" middleIcon="arrow_forward" secondText="Check out"></app-select-button>
           </div>
-         <div class="display-inline-block border-left-select-input">
-            <app-select-button (click)="onSelectCity()" buttonText="Guests(Adult, Childer, Infants)" leftIcon="group" rightIcon="keyboard_arrow_down"></app-select-button>
+         <div class="dropdown display-inline-block border-left-select-input">
+            <app-select-button (click)="onSelectGuest()" buttonText="Guests(Adult, Childer, Infants)" leftIcon="group" [rightIcon] ="showGuestDropdown ? keyboard_arrow_up : keyboard_arrow_down"></app-select-button>
+            <div class="dropdown-content" *ngIf="showGuestDropdown">
+              <app-guest-desktop *ngIf="showGuestDropdown">
+                <app-guest *ngFor="let guest of guests" [title]="guest.title" [subTitle]="guest.subTitle">
+                  <app-counter [(count)]="guest.total"></app-counter>
+                </app-guest>
+              </app-guest-desktop>
+            </div>
          </div>
-         <div class="display-inline-block border-left-select-input">
-            <app-select-button (click)="onSelectCity()"  buttonText="Rooms" rightIcon="keyboard_arrow_down"></app-select-button>
-         </div>
+         <div class="dropdown display-inline-block border-left-select-input">
+            <app-select-button (click)="onSelectRoom()"  buttonText="Rooms" rightIcon="keyboard_arrow_down"></app-select-button>
+            <div class="dropdown-content" *ngIf="showRoomDropdown">
+              <app-guest-desktop>
+                <div style="margin-left: 10px; margin-right: 10px">
+                  <app-counter [(count)]="rooms"></app-counter>
+                </div>
+              </app-guest-desktop>
+            </div>
+          </div>
       </div>
 
       <div class="advanced-search-row text-align-left">

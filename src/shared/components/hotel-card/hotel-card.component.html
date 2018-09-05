@@ -1,5 +1,7 @@
 <mat-card class="hotel-card">
+    <div>
   <img class="cover-image" src="assets/dehradun_landing_page.jpg">
+  <i class="material-icons topright" (click)="cardDetails('open')"> info </i>
   <div class="hotel-information-holder">
       <div>
          <div  class="display-inline-flex stars-holder"> 
@@ -23,12 +25,22 @@
             5 nights
           </div>
       </div>
-      <div>hotel name</div>
-      <div>Hotel address</div>
-      <div>Rooms from</div>
-      <div>$100,00</div>
+      <div class="info">{{cardData.name}}</div>
+      <div class="info">{{cardData.address}}</div>
+      <div><b>Rooms from</b></div>
+      <div class="price">&#8356;{{cardData.price}}</div>
   </div>
   <div class="text-align-center">
-      <button mat-button class="button-teal-color">Select</button>
+      <button mat-button class="button-teal-color" style="width:208px">Select</button>
+  </div>
+</div>
+  <div class="details-card" *ngIf="showCardDetails">
+        <b><i class="material-icons topright" style="color:white;font-size: 27px" (click)="cardDetails('close')"> close </i></b>
+        <p class="details-info">
+            A welcoming and family hotel offering pool,salarium with deckchairs,bar area with satelite plasma TV,air conditioning(hot/clod) and internate corner),biliards, dars, table tanis and miniglof. 
+        </p>`
+        <div class="text-align-center">
+                <button mat-button class="button-teal-color more-btn"><b>More Info</b> &nbsp;&nbsp;<i class="material-icons">play_circle_filled_white</i></button>
+        </div>
   </div>
 </mat-card>

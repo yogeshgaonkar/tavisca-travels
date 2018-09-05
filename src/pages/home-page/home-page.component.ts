@@ -38,7 +38,6 @@ export class HomePageComponent implements OnInit {
   }
 
   selectCountry(option) {
-    console.log('selected option', option);
     this.HotelSearchVal = option.name;
     this.showAdvancedSearch = true;
     this.showHotelSearchVal = false;
@@ -46,6 +45,7 @@ export class HomePageComponent implements OnInit {
 
   clearSearch() {
     this.HotelSearchVal = '';
+    this.showAdvancedSearch = false;
   }
 
 }

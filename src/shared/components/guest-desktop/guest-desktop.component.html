@@ -1,0 +1,18 @@
+<mat-card>
+    <!--<ul class="guest-list">
+        <li class="guest-list-item" *ngFor="let guest of guests" style="overflow: auto">
+            <span class="guest-list-item-caption">{{guest.title}}<span class="guest-text-small" *ngIf="guest.subTitle"> {{guest.subTitle}}</span></span>
+            <span class="guest-list-counter-container">
+                <i class="guest-counter-icons">remove</i>
+                <strong class="guest-total">{{guest.total}}</strong>
+                <i class="guest-counter-icons">add</i>
+            </span>
+        </li>
+    </ul>-->
+    <ng-content></ng-content>
+    <hr>
+    <div style="overflow: auto">
+        <span style="float: left" class="guest-text-small">Clear<i class="guest-clear-icon">close</i></span>
+        <span style="float:right" class="guest-text-small"><a class="guest-apply " href="#">Apply</a></span>
+    </div>
+</mat-card> 
