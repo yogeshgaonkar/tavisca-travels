@@ -24,7 +24,17 @@ body{
 .text-align-center{
     text-align: center;
 }
+
 .list-style-none{
     list-style: none;
     padding: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    min-width: 100%;
 }

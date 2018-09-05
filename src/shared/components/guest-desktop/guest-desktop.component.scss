@@ -1,0 +1,31 @@
+
+  .guest-counter-icons, .guest-clear-icon {
+      font-family: 'Material Icons';
+      font-style: normal;
+      display: inline-block;
+      vertical-align: middle;
+  }
+
+  .guest-clear-icon {
+      color: gray;
+      font-weight: bold;
+  }
+
+  .guest-apply {
+    color: blue;
+    text-decoration: none;
+  }
+
+  .guest-apply:hover {
+    text-decoration: underline;
+  }
+  
+  .mat-card {
+      padding: 15px;
+      color: gray;
+  }
+
+  .guest-text-small {
+      font-size: 13px;
+  }
+
