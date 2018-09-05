@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./hotel-card.component.scss']
 })
 export class HotelCardComponent implements OnInit {
-  showCardDetails: boolean;
   @Input() cardData = null;
+  showCardDetails: boolean;
   constructor() { }
 
   ngOnInit() {
