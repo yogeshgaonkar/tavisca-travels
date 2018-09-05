@@ -14,7 +14,7 @@ export class HotelSeachFilterPipe implements PipeTransform {
       }
   searchText = searchText.toLowerCase();
   return items.filter( it => {
-        return it.toLowerCase().includes(searchText);
+        return it.name.toLowerCase().includes(searchText);
       });
      }
   }
