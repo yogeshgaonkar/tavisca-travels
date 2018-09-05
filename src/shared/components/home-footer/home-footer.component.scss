@@ -1,10 +1,18 @@
 @import '../../../constants/colors.scss';
-
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), 
+         local('Roboto-Regular'), 
+         url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) 
+         format('woff');
+  }
 #home-footer-container{
     background:  $dark-primary;
     padding: 50px 200px;
     color:#fff;
-    font-family:"Helvetica Neue",sans-serif;;
+    font-family:'Roboto',"Helvetica Neue",sans-serif;;
 .container{
     display: flex;
     flex-wrap: nowrap;
@@ -14,8 +22,8 @@
   text-align: left;
   flex:1;
   }
-.heading{font-weight: bold;  margin: 10px; font-size: 20px;}
-.sub-heading{  padding:10px;  font-size: 15px;}
+.heading{font-weight: 200;  margin: 10px; font-size: 19px;}
+.sub-heading{  padding:10px;  font-size: 12px;}
 .fulltext{
     display: flex;
     flex-wrap: nowrap;
@@ -33,7 +41,7 @@
   flex:1;
 } 
 .otherMenu{display: flex;
-    flex-wrap: nowrap;padding:65px 0px 10px} 
-.phone{flex:2.5;font-size:40px;}
-.subMenu{flex:1;font-size:12px;}
+    flex-wrap: nowrap;padding:45px 0px 10px} 
+.phone{flex:2.5;font-size:30px;}
+.subMenu{font-size:11px;padding-top: 12px;padding-left:25px;}
 }
