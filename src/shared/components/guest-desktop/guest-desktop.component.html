@@ -12,7 +12,7 @@
     <ng-content></ng-content>
     <hr>
     <div style="overflow: auto">
-        <span style="float: left" class="guest-text-small">Clear<i class="guest-clear-icon">close</i></span>
-        <span style="float:right" class="guest-text-small"><a class="guest-apply " href="#">Apply</a></span>
+        <span style="float: left; cursor: pointer;" (click)="clearClicked()" class="guest-text-small">Clear<i class="guest-clear-icon">close</i></span>
+        <span style="float:right; cursor: pointer;" class="guest-text-small"><a class="guest-apply " href="#">Apply</a></span>
     </div>
 </mat-card> 

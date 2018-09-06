@@ -29,4 +29,13 @@ export class AdvancedSearchComponentComponent implements OnInit {
   onSelectRoom() {
     this.showRoomDropdown = !this.showRoomDropdown;
   }
+
+  clearRoom() {
+    this.rooms = 0;
+  }
+  clearGuest() {
+    this.guests.forEach((value: any) => {
+      value.total = 0;
+    });
+  }
 }
