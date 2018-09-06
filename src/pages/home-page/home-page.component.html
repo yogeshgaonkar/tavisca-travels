@@ -9,7 +9,7 @@
                 <ul class="list-style-none">
                    <li *ngFor="let option of options | hotelfilter: HotelSearchVal " (click)="selectCountry(option)"> {{option.name}}</li>
                 </ul>
-                <div (click)="showAdvancedSearchOptions()"><h4>Cant find what ypu are  looking for?</h4></div>
+                <div (click)="showAdvancedSearchOptions()"><h4>Cant find what you are  looking for?</h4></div>
         </div>
        
         <app-advanced-search-component *ngIf="showAdvancedSearch"></app-advanced-search-component>

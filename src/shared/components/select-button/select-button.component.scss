@@ -8,11 +8,12 @@
     padding-right: 8px;
     border-radius: 2px;
     border: 1px solid $dark-grey-warm;
+    min-width: 220px;
     cursor: pointer;
     color: $dark-grey-warm;
     .button-icon{
         color:$light-blue;
-        margin-top: 2px;
+        margin-top: 4px;
     }
     span{
         margin-top: 5px;

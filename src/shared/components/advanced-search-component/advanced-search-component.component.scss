@@ -19,3 +19,18 @@
     margin-bottom: 20px;
     margin-top: 15px;
 }
+#advanced-search-date{
+    height: 40px;
+    position: absolute;
+    width: 308px;
+    top: 39px;
+    color: transparent;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+#advanced-search-date:focus{
+    outline: none;
+    border: none;
+}

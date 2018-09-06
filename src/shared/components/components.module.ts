@@ -12,10 +12,12 @@ import { GuestDesktopComponent } from './guest-desktop/guest-desktop.component';
 import { CounterComponent } from './counter/counter.component';
 import { GuestComponent } from './guest/guest.component';
 import { CarousalComComponent } from './carousal-com/carousal-com.component';
+import { BsDatepickerModule } from 'ngx-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule, TravelMaterialModule, MatGridListModule, MatCardModule
+    CommonModule, TravelMaterialModule, MatGridListModule, MatCardModule, BsDatepickerModule.forRoot(), FormsModule
   ],
   declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent,
      HomeTitleComponent, HotelCardComponent, HomeFooterComponent, GuestDesktopComponent, CounterComponent, GuestComponent,
