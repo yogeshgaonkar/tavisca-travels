@@ -1,20 +1,25 @@
-<app-home-header ></app-home-header>
+<app-home-header></app-home-header>
+
 <div class="home-page-padding" id="home-page-title-section">
-        <app-home-title></app-home-title>
-        <div id="seach-input-field" class="{{searchContainerBorder}}">
-                <input id="hotel-search-input" type="text"  [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()" (focusout)="focusOutFunction()"/>
-                <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>
+        <div class="container">
+                <app-home-title></app-home-title>
+                <div id="seach-input-field" class="{{searchContainerBorder}}">
+                        <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()"
+                                (focusout)="focusOutFunction()" />
+                        <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>
+                </div>
+                <div *ngIf="showHotelSearchVal" id="search-auto-complete-container">
+                        <ul class="list-style-none">
+                                <li *ngFor="let option of options | hotelfilter: HotelSearchVal " (click)="selectCountry(option)"> {{option.name}}</li>
+                        </ul>
+                        <div (click)="showAdvancedSearchOptions()">
+                                <h4>Cant find what you are looking for?</h4>
+                        </div>
+                </div>
+                <app-advanced-search-component *ngIf="showAdvancedSearch"></app-advanced-search-component>
         </div>
-        <div *ngIf="showHotelSearchVal" id="search-auto-complete-container">
-                <ul class="list-style-none">
-                   <li *ngFor="let option of options | hotelfilter: HotelSearchVal " (click)="selectCountry(option)"> {{option.name}}</li>
-                </ul>
-                <div (click)="showAdvancedSearchOptions()"><h4>Cant find what you are  looking for?</h4></div>
-        </div>
-       
-        <app-advanced-search-component *ngIf="showAdvancedSearch"></app-advanced-search-component>
 </div>
-<div  class="home-page-padding"  id="hotel-cards-container">
+<div class="home-page-padding" id="hotel-cards-container">
         <app-carousal-com></app-carousal-com>
-</div>   
+</div>
 <app-home-footer></app-home-footer>
