@@ -1,11 +1,29 @@
 <div id="mobile-advanced-search-main-container" class="text-align-center">
     <div id="mobile-seach-calendar-input" class="{{searchContainerBorder}}">
-        <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Check in check out" (focus)="focusFunction()" />
-        <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">calendar_today</i>
-  </div>
+        <input id="hotel-search-input" type="text" [(ngModel)]="rangeValue"  #dp="bsDaterangepicker" (ngModelChange)="getFormatedDate()"  [bsValue]="bsValue" bsDaterangepicker  placeholder="Check in check out" (focus)="focusFunction()" />
+        <i class="material-icons" style="cursor:pointer;" >calendar_today</i>
+    </div>
   <div id="mobile-seach-addguest" class="{{searchContainerBorder}}">
-      <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="1 Room" (focus)="focusFunction()" />
+      <input id="hotel-search-input" type="text"  placeholder="1 Room" (focus)="focusFunction()" />
       <i class="material-icons" style="cursor:pointer;" (click)="openDialog()">perm_identity</i>
+  </div>
+  <div id="advanced-search-expand-label" class="text-align-right">
+      <i class="material-icons" style="cursor:pointer;" (click)="expanAdvancedSearch()">{{isAdvancedSearch?'keyboard_arrow_up' :'keyboard_arrow_down'}} </i>
+      <span>Advanced search</span>
+  </div>
+  <div *ngIf="isAdvancedSearch">
+        <div id="mobile-seach-calendar-input" class="{{searchContainerBorder}}">
+                <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Country" (focus)="focusFunction()" />
+                <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">keyboard_arrow_down</i>
+        </div>
+        <div id="mobile-seach-calendar-input" class="{{searchContainerBorder}}">
+                <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Destination" (focus)="focusFunction()" />
+                <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">keyboard_arrow_down</i>
+        </div>
+        <div id="mobile-seach-calendar-input" class="{{searchContainerBorder}}">
+                <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Resort" (focus)="focusFunction()" />
+                <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">keyboard_arrow_down</i>
+        </div>
   </div>
   <button mat-button class="button-primary">Find Hotel</button>
 </div>

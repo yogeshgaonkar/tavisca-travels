@@ -25,3 +25,11 @@
         color:$dark-primary;
     }
 }
+
+#advanced-search-expand-label{
+    margin-top:10px;
+    margin-bottom: 10px;
+    color:$light-blue;
+    display: flex;
+    flex-direction: row-reverse;
+}

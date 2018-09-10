@@ -5,7 +5,9 @@
 
       <div class="advanced-search-row text-align-left">
           <div class="display-inline-block">
-              <app-select-button (click)="onSelectCity()" buttonText="Check in" middleIcon="arrow_forward" secondText="Check out"></app-select-button>
+              <app-select-button bsDaterangepicker  buttonText="{{checkInDateText}}" middleIcon="arrow_forward" secondText="{{checkOutDateText}}"></app-select-button>
+              <input type="text" id="advanced-search-date" class="form-control" #dp="bsDaterangepicker" [(ngModel)]="rangeValue"
+               (ngModelChange)="getFormatedDate()" bsDaterangepicker [bsValue]="bsValue"/>
           </div>
          <div class="dropdown display-inline-block border-left-select-input">
             <app-select-button (click)="onSelectGuest()" buttonText="Guests(Adult, Childer, Infants)" leftIcon="group" [rightIcon] ="showGuestDropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"></app-select-button>
