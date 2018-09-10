@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-guest-desktop',
@@ -6,13 +6,21 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./guest-desktop.component.scss']
 })
 export class GuestDesktopComponent implements OnInit {
+  @Input() hideActions: boolean;
   @Output() clearValues = new EventEmitter<any>();
+  @Output() apply = new EventEmitter<any>();
 
-  constructor() { }
+  constructor() { 
+    this.hideActions = false;
+  }
 
   ngOnInit() { }
 
   clearClicked() {
     this.clearValues.emit(null);
+  }
+
+  applyClicked() {
+    this.apply.emit(null);
   }
 }

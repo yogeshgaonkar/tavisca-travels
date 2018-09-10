@@ -1,0 +1,27 @@
+<mat-card>
+    <div class="guest-mobile-header">
+      <div class="clearfix">
+        <h3 class="choose-guest primary-color">Choose Guest</h3>
+        <i style="float:right" class="material-icons">close</i>  
+      </div>
+    </div>
+    <div class="guest-mobile-content">
+      <div class="room-container" *ngFor="let room of rooms">
+        <h4 class="room-name primary-color">{{room.roomName}}</h4>
+        <div class="guest-item" *ngFor="let guest of room.guests">
+          <div class="clearfix">
+            <h4 class="choose-guest primary-color">{{guest.type}}</h4>
+            <div style="float:right">
+              <i class="counter-icons">add_circle</i>
+              <strong class="counter">{{guest.total}}</strong>
+              <i class="counter-icons">remove_circle</i>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="guest-mobile-footer">
+      <h3 class="add-room" (click)="addRoom()">Add Room</h3>
+      <div class="done">Done</div>
+    </div>
+</mat-card>

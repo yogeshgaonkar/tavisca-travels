@@ -1,18 +1,16 @@
 <div id="advanced-search-container">
   <mat-card>
-    
+
     <div>
 
       <div class="advanced-search-row text-align-left">
           <div class="display-inline-block">
-              <app-select-button bsDaterangepicker  buttonText="{{checkInDateText}}" middleIcon="arrow_forward" secondText="{{checkOutDateText}}"></app-select-button>
-              <input type="text" id="advanced-search-date" class="form-control" #dp="bsDaterangepicker" [(ngModel)]="rangeValue"
-               (ngModelChange)="getFormatedDate()" bsDaterangepicker [bsValue]="bsValue">
-            </div>
+              <app-select-button (click)="onSelectCity()" buttonText="Check in" middleIcon="arrow_forward" secondText="Check out"></app-select-button>
+          </div>
          <div class="dropdown display-inline-block border-left-select-input">
             <app-select-button (click)="onSelectGuest()" buttonText="Guests(Adult, Childer, Infants)" leftIcon="group" [rightIcon] ="showGuestDropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"></app-select-button>
             <div class="dropdown-content" *ngIf="showGuestDropdown">
-              <app-guest-desktop (clearValues)="clearGuest()">
+              <app-guest-desktop [hideActions]="false" (apply)="applyGuest()" (clearValues)="clearGuest()">
                 <app-guest *ngFor="let guest of guests" [title]="guest.title" [subTitle]="guest.subTitle">
                   <app-counter [(count)]="guest.total"></app-counter>
                 </app-guest>
@@ -22,8 +20,8 @@
          <div class="dropdown display-inline-block border-left-select-input">
             <app-select-button (click)="onSelectRoom()"  buttonText="Rooms" [rightIcon]="showRoomDropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"></app-select-button>
             <div class="dropdown-content" *ngIf="showRoomDropdown">
-              <app-guest-desktop (clearValues)="clearRoom()">
-                <div style="margin-left: 10px; margin-right: 10px">
+              <app-guest-desktop [hideActions]="false" (apply)="applyRoom()" (clearValues)="clearRoom()">
+                <div style="margin-left: 35%;">
                   <app-counter [(count)]="rooms"></app-counter>
                 </div>
               </app-guest-desktop>

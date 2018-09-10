@@ -11,6 +11,7 @@ import {MatGridListModule, MatCardModule} from '@angular/material';
 import { GuestDesktopComponent } from './guest-desktop/guest-desktop.component';
 import { CounterComponent } from './counter/counter.component';
 import { GuestComponent } from './guest/guest.component';
+import { GuestMobileComponent } from './guest-mobile/guest-mobile.component';
 import { CarousalComComponent } from './carousal-com/carousal-com.component';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
@@ -22,8 +23,8 @@ import { MobileAdvacndedSearchComponent } from './mobile-advacnded-search/mobile
   ],
   declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent,
      HomeTitleComponent, HotelCardComponent, HomeFooterComponent, GuestDesktopComponent, CounterComponent, GuestComponent,
-     CarousalComComponent, MobileAdvacndedSearchComponent ],
+     CarousalComComponent, MobileAdvacndedSearchComponent, GuestMobileComponent ],
   exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent, MobileAdvacndedSearchComponent,
-    SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent, CarousalComComponent]
+    SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent, CarousalComComponent, GuestMobileComponent]
 })
 export class ComponentsModule { }

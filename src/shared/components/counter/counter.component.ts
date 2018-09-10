@@ -22,7 +22,7 @@ export class CounterComponent implements OnInit {
   }
 
   decrement() {
-    if (this.count > -1) {
+    if (this.count > 0) {
       this.count--;
       this.countChange.emit(this.count);
     }

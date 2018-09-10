@@ -65,4 +65,12 @@ export class AdvancedSearchComponentComponent implements OnInit {
    this.checkInDateText = this.weekdayList[this.checkOutDate.getDay()] +
     ' ' + this.checkOutDate.getDate() + ' ' + this.monthsNames[this.checkOutDate.getMonth()] + ' ' + this.checkOutDate.getFullYear();
   }
+
+  applyGuest() {
+    this.showGuestDropdown = false;
+  }
+
+  applyRoom() {
+    this.showRoomDropdown = false;
+  }
 }
