@@ -10,7 +10,7 @@ export class GuestDesktopComponent implements OnInit {
   @Output() clearValues = new EventEmitter<any>();
   @Output() apply = new EventEmitter<any>();
 
-  constructor() { 
+  constructor() {
     this.hideActions = false;
   }
 

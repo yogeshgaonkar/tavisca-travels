@@ -1,12 +1,12 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-guest-desktop',
-  templateUrl: './guest-desktop.component.html',
-  styleUrls: ['./guest-desktop.component.scss']
+  selector: 'app-mobile-desktop',
+  templateUrl: './guest-mobile.component.html',
+  styleUrls: ['./guest-mobile.component.scss']
 })
 export class GuestMobileComponent implements OnInit {
-    rooms : Array<object> = [
+    rooms: Array<object> = [
         {
           roomName: 'Room 1',
           guests: [
@@ -50,8 +50,8 @@ export class GuestMobileComponent implements OnInit {
                 type: 'Children',
                 total: 0
             }
-        ] 
-      })
+        ]
+      });
   }
 
   ngOnInit() { }
