@@ -56,5 +56,6 @@ export class MobileHomePageComponent implements OnInit {
     this.HotelSearchVal = '';
     this.isSearchActive = false;
     this.showAdvancedSearch = false;
+    this.showHotelSearchVal = false;
   }
 }

@@ -1,3 +1,12 @@
-<p>
-  mobile-advacnded-search works!
-</p>
+<div id="mobile-advanced-search-main-container" class="text-align-center">
+    <div id="mobile-seach-calendar-input" class="{{searchContainerBorder}}">
+        <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Check in check out" (focus)="focusFunction()" />
+        <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">calendar_today</i>
+  </div>
+  <div id="mobile-seach-addguest" class="{{searchContainerBorder}}">
+      <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="1 Room" (focus)="focusFunction()" />
+      <i class="material-icons" style="cursor:pointer;" (click)="openDialog()">perm_identity</i>
+  </div>
+  <button mat-button class="button-primary">Find Hotel</button>
+</div>
+

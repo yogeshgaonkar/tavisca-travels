@@ -1,0 +1,27 @@
+@import '../../../constants/colors.scss';
+
+#mobile-advanced-search-main-container{
+    padding: 20px;
+}
+
+#mobile-seach-calendar-input, #mobile-seach-addguest{
+    height: 50px;
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid $dark-primary;
+    input{
+    width: 80%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 10px;
+    color:  $dark-primary;
+    }
+    i{
+        float: right;
+        margin-right: 10px;
+        margin-top: 16px;
+        color:$dark-primary;
+    }
+}

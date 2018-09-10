@@ -3,7 +3,7 @@
 <div class="{{isSearchActive?'':'home-page-padding'}}" id="home-page-title-section">
         <div class="container">
                 <app-home-title *ngIf="!isSearchActive"></app-home-title>
-                <div id="seach-input-field" class="{{searchContainerBorder}}">
+                <div id="mobile-seach-input-field" class="{{searchContainerBorder}}">
                         <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()"
                                 (focusout)="focusOutFunction()" />
                         <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>

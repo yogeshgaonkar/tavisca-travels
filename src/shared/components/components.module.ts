@@ -25,6 +25,7 @@ import { MobileAdvacndedSearchComponent } from './mobile-advacnded-search/mobile
      HomeTitleComponent, HotelCardComponent, HomeFooterComponent, GuestDesktopComponent, CounterComponent, GuestComponent,
      CarousalComComponent, MobileAdvacndedSearchComponent, GuestMobileComponent ],
   exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent, MobileAdvacndedSearchComponent,
-    SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent, CarousalComComponent, GuestMobileComponent]
+    SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent, CarousalComComponent, GuestMobileComponent],
+    entryComponents: [GuestMobileComponent]
 })
 export class ComponentsModule { }
