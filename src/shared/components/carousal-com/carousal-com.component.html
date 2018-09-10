@@ -1,6 +1,6 @@
 <div class="container">
     <div id="carousal-main-contaner">
-        <div class="display-inline-block carousal-controls-div">
+        <div *ngIf="showCarosalList" class="display-inline-block carousal-controls-div">
             <i (click)="prevHotels()" class="material-icons">
                 arrow_back_ios
             </i>
@@ -12,7 +12,7 @@
                 </li>
             </ul>
         </div>
-        <div class="display-inline-block carousal-controls-div">
+        <div *ngIf="showCarosalList" class="display-inline-block carousal-controls-div">
             <i (click)="nextHotels()" class="material-icons">
                 arrow_forward_ios
             </i>
