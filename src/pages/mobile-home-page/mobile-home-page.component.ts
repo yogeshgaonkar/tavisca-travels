@@ -24,7 +24,19 @@ export class MobileHomePageComponent implements OnInit {
     this.searchService.getListOfCountries().subscribe( (res) => {
       this.options = res['countries'];
   });
+
+  this.uiUtils.getWindowResize().subscribe({
+    next: (data) => {
+      this.resizePage(data.deviceType);
+    }
+  });
   }
+
+  resizePage(deviceType) {
+    if (deviceType !== 'sm' && deviceType !== 'xs' ) {
+     this.router.navigateByUrl('');
+     }
+   }
 
   focusFunction() {
     this.searchContainerBorder = 'search-field-border';
