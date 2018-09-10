@@ -14,6 +14,7 @@ import { GuestComponent } from './guest/guest.component';
 import { CarousalComComponent } from './carousal-com/carousal-com.component';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { MobileAdvacndedSearchComponent } from './mobile-advacnded-search/mobile-advacnded-search.component';
 
 @NgModule({
   imports: [
@@ -21,8 +22,8 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [ HomeHeaderComponent, AdvancedSearchComponentComponent, SelectButtonComponent,
      HomeTitleComponent, HotelCardComponent, HomeFooterComponent, GuestDesktopComponent, CounterComponent, GuestComponent,
-     CarousalComComponent ],
-  exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent,
+     CarousalComComponent, MobileAdvacndedSearchComponent ],
+  exports: [ HomeHeaderComponent, AdvancedSearchComponentComponent, MobileAdvacndedSearchComponent,
     SelectButtonComponent, HomeTitleComponent, HotelCardComponent, HomeFooterComponent, CarousalComComponent]
 })
 export class ComponentsModule { }

@@ -1,0 +1,72 @@
+@import '../../constants/colors.scss';
+
+#home-page-title-section{
+    background-image: url('../../assets/s3.jpg');
+    height: auto;
+    min-height: 400px;
+    padding-bottom: 30px;
+    background-size: cover;
+}
+#hotel-cards-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.home-page-padding{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#seach-input-field{
+    height: 60px;
+    background: white;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    input{
+    width: 90%;
+    height: 56px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding-left: 20px;
+    color:  $dark-primary;
+    }
+    i{
+        float: right;
+        margin-right: 10px;
+        margin-top: 16px;
+        color:$dark-primary;
+    }
+}
+.search-field-border{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border:1px solid  $dark-primary;
+}
+
+#search-auto-complete-container{
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    color:$dark-primary;
+    li{
+        padding: 6px;
+        font-size: 18px; 
+        cursor: pointer;
+    }
+    li:hover {
+        background: rgb(190, 188, 188);
+    }
+    ul{
+        border-bottom: 1px solid gray;
+        margin-bottom: 20px;
+        max-height: 200px;
+        overflow: auto;
+    }
+    h4{
+        color: $light-blue;
+    }
+}
+
+.container{
+    padding: 0;
+}

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {SeachServiceService} from '../../services/seach-service.service';
+import {UiUtilsService} from '../../shared/helpers/ui-utils.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
-  providers: [ SeachServiceService ]
+  providers: [ SeachServiceService, UiUtilsService ]
 })
 export class HomePageComponent implements OnInit {
 
@@ -14,12 +16,24 @@ export class HomePageComponent implements OnInit {
   options: string[] = [];
   showAdvancedSearch: boolean;
   showHotelSearchVal: boolean;
-  constructor( private searchService: SeachServiceService ) { }
+  constructor( private searchService: SeachServiceService, private uiUtils: UiUtilsService, private router: Router ) { }
 
   ngOnInit() {
     this.searchService.getListOfCountries().subscribe( (res) => {
       this.options = res['countries'];
   });
+  this.resizePage(this.uiUtils.getDeviceCategory());
+  this.uiUtils.getWindowResize().subscribe({
+    next: (data) => {
+      this.resizePage(data.deviceType);
+    }
+  });
+  }
+
+  resizePage(deviceType) {
+   if (deviceType === 'sm' || deviceType === 'xs' ) {
+    this.router.navigateByUrl('/mobile-home');
+    }
   }
 
   focusFunction() {
@@ -29,7 +43,6 @@ export class HomePageComponent implements OnInit {
 
   focusOutFunction() {
     this.searchContainerBorder = '';
-   // this.showHotelSearchVal = false;
   }
 
   showAdvancedSearchOptions() {

@@ -1,0 +1,30 @@
+<app-home-header  *ngIf="!isSearchActive"></app-home-header>
+
+<div class="{{isSearchActive?'':'home-page-padding'}}" id="home-page-title-section">
+        <div class="container">
+                <app-home-title *ngIf="!isSearchActive"></app-home-title>
+                <div id="seach-input-field" class="{{searchContainerBorder}}">
+                        <input id="hotel-search-input" type="text" [(ngModel)]="HotelSearchVal" placeholder="Where do you want to go?" (focus)="focusFunction()"
+                                (focusout)="focusOutFunction()" />
+                        <i class="material-icons" style="cursor:pointer;" (click)="clearSearch()">{{HotelSearchVal?'close':'search'}}</i>
+                </div>
+                <div *ngIf="showHotelSearchVal" id="search-auto-complete-container">
+                       <div *ngIf="!showAdvancedSearch"> 
+                               <ul class="list-style-none">
+                                       <li *ngFor="let option of options | hotelfilter: HotelSearchVal " (click)="selectCountry(option)"> {{option.name}}</li>
+                                </ul>
+                                <div>
+                                        <h4>Cant find what you are looking for?</h4>
+                                </div>
+                        </div>
+                        <div *ngIf="showAdvancedSearch">
+                                <app-mobile-advacnded-search></app-mobile-advacnded-search>
+                        </div>
+                </div>
+          
+        </div>
+</div>
+<div class="home-page-padding" id="hotel-cards-container">
+        <app-carousal-com></app-carousal-com>
+</div>
+<app-home-footer></app-home-footer>
