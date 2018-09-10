@@ -20,7 +20,7 @@ export class UiUtilsService {
     }
   }
   getWindowResize() {
-    const observable = new Observable.create((observer) => {
+    return Observable.create((observer) => {
       window.addEventListener('resize', () => {
         observer.next({
           width: window.innerWidth,
@@ -29,6 +29,5 @@ export class UiUtilsService {
         });
       });
     });
-    return observable;
   }
 }
