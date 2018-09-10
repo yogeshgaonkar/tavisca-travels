@@ -5,9 +5,17 @@
 
 @import './constants/colors.scss';
 
-body{
+html, body {
+    overflow-x: hidden
+}
+
+body {
+    overflow: hidden !important;
+    width: 100%;
+    height: 100%;
     margin: 0;
 }
+
 .button-teal-color{
     background: $teal-color;
     color: white;

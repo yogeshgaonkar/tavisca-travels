@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import {UiUtilsService} from '../../helpers/ui-utils.service';
 @Component({
   selector: 'app-carousal-com',
   templateUrl: './carousal-com.component.html',
-  styleUrls: ['./carousal-com.component.scss']
+  styleUrls: ['./carousal-com.component.scss'],
+  providers: [UiUtilsService]
 })
 
 export class CarousalComComponent implements OnInit {
@@ -11,9 +12,12 @@ export class CarousalComComponent implements OnInit {
   currenthotels: Array<Object>;
   carosalListWidth = 500;
   startIndex = 0;
-  spliceCount = 3;
+  maxSpliceCount = 3;
+  spliceCount = this.maxSpliceCount;
   showCarosalList: boolean;
-  constructor() { }
+  constructor(private uiUtils: UiUtilsService) { }
+
+
   ngOnInit() {
     this.hotels = [
       {
@@ -37,11 +41,29 @@ export class CarousalComComponent implements OnInit {
         price: 2234
       }
     ];
-    this.setCurrentHotels();
     this.showCarosalList = true;
+    this.resizeTheCarosal(this.uiUtils.getDeviceCategory());
+    this.uiUtils.getWindowResize().subscribe({
+      next: (data) => {
+        console.log(data);
+        this.resizeTheCarosal(data.deviceType);
+      }
+    });
 
   }
 
+  resizeTheCarosal(deviceType) {
+
+    if (deviceType === 'md' ) {
+      this.maxSpliceCount = 2;
+      this.spliceCount = 2;
+    }
+    if (deviceType === 'sm' || deviceType === 'xs' ) {
+      this.maxSpliceCount = 1;
+      this.spliceCount = 1;
+    }
+    this.setCurrentHotels();
+  }
   setCurrentHotels() {
     const tempHotels = Object.create(this.hotels);
     this.currenthotels = tempHotels.splice(this.startIndex, this.spliceCount);
@@ -54,8 +76,8 @@ export class CarousalComComponent implements OnInit {
 
   nextHotels() {
     this.startIndex++;
-    if ( ( this.startIndex + 3 ) > this.hotels.length) {
-      this.spliceCount = this.hotels.length - ( this.startIndex + 3 );
+    if ( ( this.startIndex + this.maxSpliceCount ) > this.hotels.length) {
+      this.spliceCount = this.hotels.length - ( this.startIndex + this.maxSpliceCount );
       if (this.spliceCount <= 0) {
         this.spliceCount = 0;
         this.startIndex--;
@@ -73,7 +95,7 @@ export class CarousalComComponent implements OnInit {
       if ( ( this.spliceCount + this.startIndex ) > this.hotels.length) {
         this.spliceCount = this.hotels.length - ( this.startIndex + this.spliceCount );
       } else {
-        this.spliceCount = 3 ;
+        this.spliceCount = this.maxSpliceCount ;
       }
       this.setCurrentHotels();
     }
