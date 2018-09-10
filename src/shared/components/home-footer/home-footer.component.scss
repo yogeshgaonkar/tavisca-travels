@@ -21,11 +21,23 @@
   text-align: left;
   font-size: 10px;
   }
-
-.otherMenu{display: flex;
+  #footerMenu{display: flex;}
+.otherMenu{//display: flex;
    // flex-wrap: nowrap;
    padding:45px 0px 10px} 
 .phone{//flex:2.5;
     font-size:30px;}
 .subMenu{font-size:11px;padding-top: 12px;padding-left:25px;}
  }
+ @media(max-width:768px) and (min-width:254px){
+  #home-footer-container{padding-top:0px;}
+ #webHeaderMenu{
+   display:none;
+ }
+ #footerImage{
+   display:none;
+ }
+ .subMenu {
+  padding: 12px 0px 12px 10px;
+ }
+}
