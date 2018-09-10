@@ -5,7 +5,7 @@
                 arrow_back_ios
             </i>
         </div>
-        <div class="display-inline-block" style="width:100%">
+        <div class="display-inline-block">
             <ul *ngIf="showCarosalList" id="carousal-list" class="list-style-none">
                 <li *ngFor="let hotel of currenthotels">
                     <app-hotel-card cardData="{{hotel.name+':'+hotel.price}}"></app-hotel-card>

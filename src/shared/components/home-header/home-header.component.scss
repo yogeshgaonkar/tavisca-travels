@@ -42,11 +42,14 @@
 @media(max-width:768px) and (min-width:254px){
     #headder-menu-list{display:none;}
     #my-account-link-holder{float:right}
-    #headder-menu-icon-holder{margin-top: 20px;margin-left: 20px;}
+    #headder-menu-icon-holder{margin-top: 20px;margin-left: 20px;
+    img{
+        height:35px;
+    }}
     .header-font{display:none}
     #mobileMenu{display:inline;padding-right:20px; 
         .material-icons{font-size:30px;margin-bottom: 30px;}}
     #my-account-link-holder{margin-top: 6px;
-    .material-icons{font-size:30px;margin-top:18px;}
+    .material-icons{font-size:25px;margin-top:18px;}
     }
 }

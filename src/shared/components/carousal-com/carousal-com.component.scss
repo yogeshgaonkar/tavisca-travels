@@ -66,3 +66,12 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+@media(max-width:768px) and (min-width:254px){
+#carousal-main-contaner[_ngcontent-c5] .carousal-controls-div[_ngcontent-c5] i[_ngcontent-c5] {
+   background: none;padding:0px;
+  }
+#carousal-main-contaner[_ngcontent-c5] .carousal-controls-div[_ngcontent-c5] {
+    margin: 0%;
+}
+}
