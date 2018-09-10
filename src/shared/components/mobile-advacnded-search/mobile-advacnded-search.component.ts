@@ -30,7 +30,7 @@ export class MobileAdvacndedSearchComponent implements OnInit {
 
   openDialog() {
     this.dialogRef = this.dialog.open(GuestMobileComponent, {
-      width: 'auto',
+      width: '400px',
       data: {
         onDailogClose: this.dialogRef
       }

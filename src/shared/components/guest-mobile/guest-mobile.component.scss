@@ -1,98 +1,90 @@
-.mat-card *{
-    box-sizing: border-box;
-  }
   
-  .primary-color {
-    color: #0A2F64;
-  }
+.primary-color {
+  color: #0A2F64;
+}
   
-  .counter {
-      margin-left: 8px;
-      margin-right: 8px;
-  }
+.counter {
+    margin-left: 8px;
+    margin-right: 8px;
+}
   
-  ::-webkit-scrollbar {
-      width: 5px;
-  }
+::-webkit-scrollbar {
+    width: 5px;
+}
   
-  ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 2px;
-      background: #f1f1f1;
-  }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+    background: #f1f1f1;
+}
    
-  ::-webkit-scrollbar-thumb {
-      background: red; 
-      border-radius: 10px;
-      background: #888; 
-  }
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+    background: #888; 
+}
   
-  ::-webkit-scrollbar-thumb:hover {
-      background: #b30000; 
-      background: #555;
-  }
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+    background: #555;
+}
   
-  .mat-card {
-    height: 400px;
-    width: 300px;
-  }
+.choose-guest {
+  display: inline-block;
+  margin: 0;
+}
   
-  .choose-guest {
-    display: inline-block;
-    margin: 0;
-  }
+.guest-mobile-header {
+  height: 10%;
+}
   
-  .guest-mobile-header {
-    height: 10%;
-  }
+.guest-mobile-content {
+  height: 75%; 
+  overflow: auto;
+}
   
-  .guest-mobile-content {
-    height: 75%; 
-    overflow: auto;
-  }
+.guest-mobile-footer {
+  height: 15%;
+}
   
-  .guest-mobile-footer {
-    height: 15%;
-  }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
   
-  .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-  }
+.add-room, .room-name {
+  margin: 0;
+}
   
-  .add-room, .room-name {
-    margin: 0;
-  }
+.add-room {
+  margin-top: 10px;
+  padding-bottom: 12px;
+  color: #067CC4;
+}
   
-  .add-room {
-    margin-top: 10px;
-    padding-bottom: 12px;
-    color: #067CC4;
-  }
+.done {
+  float: right;
+}
   
-  .done {
-    float: right;
-  }
+.guest-item {
+  margin-top: 8%;
+  margin-bottom: 8%;
+  padding: 5%;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
   
-  .guest-item {
-    margin-top: 8%;
-    margin-bottom: 8%;
-    padding: 5%;
-    border: 1px solid gray;
-    border-radius: 6px;
-  }
+.room-container {
+  margin-right: 3%;
+}
   
-  .room-container {
-    margin-right: 3%;
-  }
-  
-  .counter-icons {
-    color: dark;
-    font-size: 23px;
-    font-family: 'Material Icons';
-    font-style: normal;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.counter-icons {
+  color: grey;
+  font-size: 23px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
