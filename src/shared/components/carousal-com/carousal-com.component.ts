@@ -57,10 +57,12 @@ export class CarousalComComponent implements OnInit {
     if (deviceType === 'md' ) {
       this.maxSpliceCount = 2;
       this.spliceCount = 2;
-    }
-    if (deviceType === 'sm' || deviceType === 'xs' ) {
+    } else if (deviceType === 'sm' || deviceType === 'xs' ) {
       this.maxSpliceCount = 1;
       this.spliceCount = 1;
+    } else {
+      this.maxSpliceCount = 3;
+      this.spliceCount = 3;
     }
     this.setCurrentHotels();
   }
