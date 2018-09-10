@@ -20,7 +20,7 @@ export class MobileAdvacndedSearchComponent implements OnInit {
   checkOutDate = new Date();
   weekdayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
   monthsNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  constructor(public dialog: MatDialog) { 
+  constructor(public dialog: MatDialog) {
     this.maxDate.setDate(this.maxDate.getDate() + 7);
     this.bsRangeValue = [this.bsValue, this.maxDate];
   }

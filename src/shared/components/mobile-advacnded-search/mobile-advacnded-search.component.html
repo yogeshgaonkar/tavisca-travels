@@ -4,8 +4,8 @@
         <i class="material-icons" style="cursor:pointer;" >calendar_today</i>
     </div>
   <div id="mobile-seach-addguest" class="{{searchContainerBorder}}">
-      <input id="hotel-search-input" type="text"  placeholder="1 Room" (focus)="focusFunction()" />
-      <i class="material-icons" style="cursor:pointer;" (click)="openDialog()">perm_identity</i>
+      <input id="hotel-search-input" type="text" (click)="openDialog()"  placeholder="1 Room" (focus)="focusFunction()" />
+      <i class="material-icons" style="cursor:pointer;" >perm_identity</i>
   </div>
   <div id="advanced-search-expand-label" class="text-align-right">
       <i class="material-icons" style="cursor:pointer;" (click)="expanAdvancedSearch()">{{isAdvancedSearch?'keyboard_arrow_up' :'keyboard_arrow_down'}} </i>
